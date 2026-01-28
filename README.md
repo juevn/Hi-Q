@@ -1,12 +1,13 @@
 # Hi-Q
 
-Experimental code for multi-hop QA that combines **Dense Retrieval + LLM reasoning**.  
-The default flow is:
+## Method Overview
 
-- Try a **single-hop** answer first.
-- If that fails, expand to **multi-hop retrieval/reasoning (with beam search)**.
+This framework mitigates granularity mismatch via **hierarchical evidence-guided query refinement**.  
+Starting from a coarse query, it **recursively decomposes** it into two finer sub-queries until each aligns with retrievable, atomic evidence.  
+Retrieval success signals adequate alignment, while failure triggers further decomposition, forming a **binary decomposition tree** whose leaves represent the optimal granularity for evidence acquisition.  
+To prevent semantic drift and error propagation, a **round-trip consistency check** ensures sub-queries can reconstruct the original intent.
 
-Supported datasets: HotpotQA, 2WikiMultiHopQA, MuSiQue
+<img src="image/ours_overview.png" alt="Method overview diagram" width="80%" />
 
 ---
 
@@ -18,7 +19,7 @@ Supported datasets: HotpotQA, 2WikiMultiHopQA, MuSiQue
 - `src/model/hi_q/retriever.py` : Dense retriever + cache
 - `src/dataset/*` : dataset loaders
 - `config/` : Hydra configs (model/benchmark)
-- `dataset/` : sample dataset/corpus JSON
+- `dataset/` : dataset/corpus JSON
 - `outputs/` : results output directory
 - `data/cache/` : retrieval index cache (auto-generated)
 
@@ -29,28 +30,17 @@ Supported datasets: HotpotQA, 2WikiMultiHopQA, MuSiQue
 ### 1) Path configuration
 
 Replace `{YOUR_ROOT_DIR}` in `config/model/baseline.yaml` with your repo path.
-Example: `/home/jekim/Hi-Q`
+Example: `/path/to/Hi-Q`
 
 ```yaml
 # config/model/baseline.yaml
 paths:
-  root_dir: /home/jekim/Hi-Q
+  root_dir: /path/to/Hi-Q
 ```
 
 It is also recommended to set `root_dir_path` in `config/config.yaml` to the same value (for clarity).
 
-### 2) Install dependencies
-
-There is no requirements file, so install dependencies manually.
-Minimal set:
-
-```bash
-pip install torch transformers accelerate hydra-core omegaconf openai tiktoken requests tqdm numpy
-```
-
-If you use a GPU, install a CUDA-matched version of torch.
-
-### 3) LLM configuration
+### 2) LLM configuration
 
 - Default is an OpenAI model (`gpt-4o-mini`).
 - For OpenAI, set:
@@ -70,22 +60,27 @@ export OPENAI_API_KEY="YOUR_KEY"
 Main entrypoint:
 
 ```bash
-python /home/jekim/Hi-Q/src/model/hi_q/hi_q.py
+python /path/to/Hi-Q/src/model/hi_q/hi_q.py
 ```
 
 **Important:** the repo root must be in `PYTHONPATH` for `src.*` imports.  
 Recommended:
 
 ```bash
-PYTHONPATH=/home/jekim/Hi-Q python /home/jekim/Hi-Q/src/model/hi_q/hi_q.py
+PYTHONPATH=/path/to/Hi-Q python /path/to/Hi-Q/src/model/hi_q/hi_q.py
 ```
 
 ### Switch dataset
 
-Use Hydra override:
+Edit the config file instead of using CLI overrides.
 
-```bash
-PYTHONPATH=/home/jekim/Hi-Q python /home/jekim/Hi-Q/src/model/hi_q/hi_q.py benchmark=hotpotqa
+In `config/config.yaml`, change the default benchmark:
+
+```yaml
+defaults:
+  - _self_
+  - model: baseline
+  - benchmark: hotpotqa
 ```
 
 Supported benchmarks:
@@ -98,7 +93,7 @@ Supported benchmarks:
 Using Accelerate:
 
 ```bash
-accelerate launch /home/jekim/Hi-Q/src/model/hi_q/hi_q.py
+accelerate launch /path/to/Hi-Q/src/model/hi_q/hi_q.py
 ```
 
 ---
@@ -117,13 +112,3 @@ Retrieval embedding cache:
 ```
 data/cache/<benchmark>/passage_embeddings.npz
 ```
-
----
-
-## Notes / Troubleshooting
-
-- In `src/model/hi_q/retriever.py`, the `NVEmbedV2Embedder` import path is
-  `src.model.baseline...`, which can cause `ModuleNotFoundError`.  
-  Change it to `src.model.hi_q.embedding_model.NVEmbedV2` if needed.
-- Dataset files are included in `dataset/`.
-- Wrong paths will raise `FileNotFoundError`.
