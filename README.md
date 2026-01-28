@@ -7,7 +7,7 @@ Starting from a coarse query, it **recursively decomposes** it into two finer su
 Retrieval success signals adequate alignment, while failure triggers further decomposition, forming a **binary decomposition tree** whose leaves represent the optimal granularity for evidence acquisition.  
 To prevent semantic drift and error propagation, a **round-trip consistency check** ensures sub-queries can reconstruct the original intent.
 
-<img src="image/ours_overview.png" alt="Method overview diagram" width="80%" />
+<img src="image/ours_overview.png" alt="Method overview diagram" width="100%" />
 
 ---
 
