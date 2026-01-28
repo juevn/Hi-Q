@@ -5,7 +5,7 @@ import json
 import numpy as np
 import hashlib
 
-from src.model.baseline.embedding_model.NVEmbedV2 import NVEmbedV2Embedder
+from src.model.hi_q.embedding_model.NVEmbedV2 import NVEmbedV2Embedder
 
 
 class DenseRetriever:

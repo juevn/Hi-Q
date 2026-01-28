@@ -1,4 +1,4 @@
-name: baseline
+name: hiq
 
 paths:
   root_dir: {YOUR_ROOT_DIR}
@@ -22,5 +22,3 @@ add_eos: True
 
 retrieve_top_k: 5
 retrieve_cache_path: ${model.paths.root_dir}/data/cache/${benchmark.name}/passage_embeddings.npz
-
-beam_width: 3

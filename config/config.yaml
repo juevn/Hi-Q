@@ -3,7 +3,7 @@ root_dir_path: {YOUR_ROOT_DIR}
 # Defaults
 defaults:
     - _self_
-    - model: baseline
+    - model: hiq
     - benchmark: musique
 
 hydra:
