@@ -1,0 +1,12 @@
+root_dir_path: {YOUR_ROOT_DIR}
+
+# Defaults
+defaults:
+    - _self_
+    - model: baseline
+    - benchmark: musique
+
+hydra:
+  output_subdir: null
+  run:
+    dir: ./runs/

@@ -1,0 +1,3 @@
+name: 2wikimultihopqa
+dataset_path: ${model.paths.root_dir}/dataset/2wikimultihopqa.json
+corpus_path: ${model.paths.root_dir}/dataset/2wikimultihopqa_corpus.json

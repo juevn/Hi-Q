@@ -1,0 +1,26 @@
+name: baseline
+
+paths:
+  root_dir: {YOUR_ROOT_DIR}
+  benchmark_dir: ${model.paths.root_dir}/benchmark
+
+# Outputs
+output_path: ${model.paths.root_dir}/outputs/${benchmark.name}
+
+# Model
+llmModelName: gpt-4o-mini
+reasoning_effort: medium
+temperature: 0.0
+top_p: 0.9
+max_tokens: 512
+
+embeddingName: nvidia/NV-Embed-v2
+embedding_max_seq_length: 2048
+batch_size: 4
+normalize: True
+add_eos: True
+
+retrieve_top_k: 5
+retrieve_cache_path: ${model.paths.root_dir}/data/cache/${benchmark.name}/passage_embeddings.npz
+
+beam_width: 3

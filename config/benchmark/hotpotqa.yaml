@@ -1,0 +1,3 @@
+name: hotpotqa
+dataset_path: ${model.paths.root_dir}/dataset/hotpotqa.json
+corpus_path: ${model.paths.root_dir}/dataset/hotpotqa_corpus.json
