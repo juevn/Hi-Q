@@ -13,6 +13,7 @@ PathLike = Union[str, Path]
 JsonDict = Dict[str, Any]
 
 
+@register_dataset("musique_full")
 @register_dataset("musique")
 class MuSiQue(BaseDataset):
     """MuSiQue dataset class

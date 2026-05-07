@@ -13,6 +13,7 @@ PathLike = Union[str, Path]
 JsonDict = Dict[str, Any]
 
 
+@register_dataset("hotpotqa_full")
 @register_dataset("hotpotqa")
 class HotpotQA(BaseDataset):
     """HotpotQA dataset class

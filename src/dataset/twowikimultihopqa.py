@@ -13,6 +13,7 @@ PathLike = Union[str, Path]
 JsonDict = Dict[str, Any]
 
 
+@register_dataset("2wikimultihopqa_full")
 @register_dataset("2wikimultihopqa")
 class twowikimultihopqa(BaseDataset):
     """2wikimultihopqa dataset class

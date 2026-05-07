@@ -1,0 +1,3 @@
+name: musique_full
+dataset_path: ${model.paths.root_dir}/dataset/musique_1000_full.json
+corpus_path: ${model.paths.root_dir}/dataset/musique_1000_full_corpus.json
