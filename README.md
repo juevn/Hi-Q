@@ -5,6 +5,9 @@
 [![PDF](https://img.shields.io/badge/PDF-Download-b31b1b)](https://arxiv.org/pdf/2608.30468)
 [![Project](https://img.shields.io/badge/Project-Website-1f6feb)](https://hi-q-project.github.io/)
 
+> 🎉 **Accepted at [NeurIPS 2026](https://neurips.cc/Conferences/2026).**
+> Official implementation of [Hi-Q](https://arxiv.org/abs/2608.30468) by [Jueun Kim](https://juevn.github.io/), [Sungho Park](https://pshlego.github.io/), and [Wook-Shin Han](https://wscrony.github.io/) (POSTECH).
+
 ## Overview
 
 A central bottleneck in multi-hop QA is that the unit at which a question is **logically expressed** often differs from the unit at which evidence can be **reliably retrieved**. Queries that are too coarse entangle multiple reasoning constraints and cause retrieval interference; queries that are too fine drop contextual constraints and over-decompose.
