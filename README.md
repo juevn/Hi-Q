@@ -1,4 +1,9 @@
-# Hi-Q: Evidence-Conditioned Hierarchical Query Refinement for Multi-Hop QA
+# Hi-Q: Hierarchical Evidence-guided Query Refinement for Multi-Hop Question Answering
+
+[![NeurIPS](https://img.shields.io/badge/NeurIPS-2026-1f6feb)](https://neurips.cc/Conferences/2026)
+[![arXiv](https://img.shields.io/badge/arXiv-2608.30468-b31b1b)](https://arxiv.org/abs/2608.30468)
+[![PDF](https://img.shields.io/badge/PDF-Download-b31b1b)](https://arxiv.org/pdf/2608.30468)
+[![Project](https://img.shields.io/badge/Project-Website-1f6feb)](https://hi-q-project.github.io/)
 
 ## Overview
 
@@ -22,7 +27,7 @@ Refinement is therefore not an end in itself — it is a controlled search for t
 Across MuSiQue, HotpotQA, and 2WikiMultiHopQA (1,000-question evaluation per benchmark):
 
 - **Sampled supporting/distractor setting.** 57.9 EM / 69.3 F1 on average — +5.6 EM / +3.9 F1 over PropRAG (graph-based RAG) and +13.7 EM / +15.8 F1 over IRCoT (iterative retrieval).
-- **Full-corpus retrieval** (139K–5.2M passages). 53.4 EM / 65.2 F1 on average, +16.3 EM / +19.4 F1 over IRCoT, **without** corpus-wide graph construction.
+- **Full-corpus retrieval** (139K–5.2M passages). 52.3 EM / 64.0 F1 on average, +15.1 EM / +18.2 F1 over IRCoT, **without** corpus-wide graph construction.
 
 ---
 
