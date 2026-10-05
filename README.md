@@ -4,6 +4,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2608.30468-b31b1b)](https://arxiv.org/abs/2608.30468)
 [![PDF](https://img.shields.io/badge/PDF-Download-b31b1b)](https://arxiv.org/pdf/2608.30468)
 [![Project](https://img.shields.io/badge/Project-Website-1f6feb)](https://hi-q-project.github.io/)
+[![License](https://img.shields.io/badge/License-MIT-d9b300)](LICENSE)
 
 > 🎉 **Accepted at [NeurIPS 2026](https://neurips.cc/Conferences/2026).**
 > Official implementation of [Hi-Q](https://arxiv.org/abs/2608.30468) by [Jueun Kim](https://juevn.github.io/), [Sungho Park](https://pshlego.github.io/), and [Wook-Shin Han](https://wscrony.github.io/) (POSTECH).
@@ -185,3 +186,9 @@ Retrieval embedding cache:
 ```
 data/cache/<benchmark>/passage_embeddings.npz
 ```
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).
