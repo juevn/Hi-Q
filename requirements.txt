@@ -1,0 +1,18 @@
+# Retrieval and embedding
+torch
+transformers
+accelerate
+einops          # pulled in by NV-Embed-v2's remote code (trust_remote_code=True)
+numpy
+
+# Configuration
+hydra-core
+omegaconf
+
+# Readers and tokenisation
+openai
+tiktoken
+requests
+
+# Progress reporting
+tqdm

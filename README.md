@@ -61,6 +61,16 @@ Across MuSiQue, HotpotQA, and 2WikiMultiHopQA (1,000-question evaluation per ben
 
 ## Setup
 
+### 0) Install
+
+```bash
+pip install -r requirements.txt
+```
+
+Developed on Python 3.13. `torch` is listed unpinned so you can match the CUDA
+build for your machine; install it from [pytorch.org](https://pytorch.org) first
+if you need a specific CUDA version.
+
 ### 1) Path configuration
 
 Replace `{YOUR_ROOT_DIR}` in `config/model/hiq.yaml` with your repo path:

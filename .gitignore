@@ -1,0 +1,19 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+
+# Hydra run directories and results
+outputs/
+runs/
+.hydra/
+
+# Retrieval embedding cache (multi-GB)
+data/cache/
+
+# Environments and secrets
+.venv/
+venv/
+.env
+
+# macOS
+.DS_Store
