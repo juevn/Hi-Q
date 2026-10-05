@@ -189,6 +189,19 @@ data/cache/<benchmark>/passage_embeddings.npz
 
 ---
 
+## Citation
+
+```bibtex
+@inproceedings{kim2026hiq,
+  title     = {Hi-Q: Hierarchical Evidence-guided Query Refinement
+               for Multi-Hop Question Answering},
+  author    = {Kim, Jueun and Park, Sungho and Han, Wook-Shin},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2026},
+  note      = {arXiv:2608.30468}
+}
+```
+
 ## License
 
 Released under the [MIT License](LICENSE).
