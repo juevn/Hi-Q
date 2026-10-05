@@ -1,4 +1,6 @@
-# Hi-Q: Hierarchical Evidence-guided Query Refinement for Multi-Hop Question Answering
+<div align="center">
+
+# Hi-Q: Hierarchical Evidence-guided Query Refinement<br>for Multi-Hop Question Answering
 
 [![NeurIPS](https://img.shields.io/badge/NeurIPS-2026-1f6feb)](https://neurips.cc/Conferences/2026)
 [![arXiv](https://img.shields.io/badge/arXiv-2608.30468-b31b1b)](https://arxiv.org/abs/2608.30468)
@@ -6,8 +8,15 @@
 [![Project](https://img.shields.io/badge/Project-Website-1f6feb)](https://hi-q-project.github.io/)
 [![License](https://img.shields.io/badge/License-MIT-d9b300)](LICENSE)
 
-> 🎉 **Accepted at [NeurIPS 2026](https://neurips.cc/Conferences/2026).**
-> Official implementation of [Hi-Q](https://arxiv.org/abs/2608.30468) by [Jueun Kim](https://juevn.github.io/), [Sungho Park](https://pshlego.github.io/), and [Wook-Shin Han](https://wscrony.github.io/) (POSTECH).
+<h3>🎉 Accepted at <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a> 🎉</h3>
+
+Official implementation by
+[Jueun Kim](https://juevn.github.io/) &nbsp;&middot;&nbsp;
+[Sungho Park](https://pshlego.github.io/) &nbsp;&middot;&nbsp;
+[Wook-Shin Han](https://wscrony.github.io/)
+&nbsp;&mdash;&nbsp; POSTECH
+
+</div>
 
 ## Overview
 
