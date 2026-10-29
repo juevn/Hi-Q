@@ -16,6 +16,11 @@ Official implementation by
 [Wook-Shin Han](https://wscrony.github.io/)
 &nbsp;&mdash;&nbsp; POSTECH
 
+<br>
+
+<img src="image/hiq_trace.gif" alt="Hi-Q query tree trace on a MuSiQue question" width="100%" />
+<sub><i>Illustrative trace on a MuSiQue question: the tree grows only where retrieved evidence fails to resolve a query.</i></sub>
+
 </div>
 
 ## Overview
