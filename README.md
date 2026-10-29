@@ -10,14 +10,6 @@
 
 <h3>🎉 Accepted at <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a> 🎉</h3>
 
-Official implementation by
-[Jueun Kim](https://juevn.github.io/) &nbsp;&middot;&nbsp;
-[Sungho Park](https://pshlego.github.io/) &nbsp;&middot;&nbsp;
-[Wook-Shin Han](https://wscrony.github.io/)
-&nbsp;&mdash;&nbsp; POSTECH
-
-<br>
-
 <img src="image/hiq_trace.gif" alt="Hi-Q query tree trace on a MuSiQue question" width="100%" />
 <sub><i>Illustrative trace on a MuSiQue question: the tree grows only where retrieved evidence fails to resolve a query.</i></sub>
 
